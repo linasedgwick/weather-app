@@ -23,35 +23,38 @@ function formatDate(timestamp) {
 
 function displayTemperature(response) {
   let temperature = document.querySelector("#temperature");
+  let city = document.querySelector("#city-name");
+  let weatherDescription = document.querySelector("#description");
+  let humidity = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#wind-speed");
+  let dateElement = document.querySelector("#date");
+  let icon = document.querySelector("#icon");
   celsiusTemp = Math.round(response.data.main.temp);
   temperature.innerHTML = celsiusTemp;
-  let city = document.querySelector("#city-name");
   city.innerHTML = response.data.name;
-  let weatherDescription = document.querySelector("#description");
   weatherDescription.innerHTML = response.data.weather[0].description;
-  let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.main.humidity;
-  let windSpeed = document.querySelector("#wind-speed");
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
-  let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  let icon = document.querySelector("#icon");
   icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
 }
+
 function search(city) {
   let apiKey = "d505e69a528ffd38f9513a4e4c686175";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
 }
+
 function handleSearch(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input");
   search(cityInput.value);
 }
+
 function displayFahrenheit(event) {
   event.preventDefault();
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
@@ -60,6 +63,7 @@ function displayFahrenheit(event) {
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
 }
+
 function displayCelsius(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
@@ -67,6 +71,7 @@ function displayCelsius(event) {
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
 }
+
 let celsiusTemp = null;
 
 let form = document.querySelector("#search-form");
