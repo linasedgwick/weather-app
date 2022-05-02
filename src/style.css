@@ -37,7 +37,6 @@ li {
 }
 .tempDisplay {
   display: inline;
-  float: left;
 }
 .weather-temperature img {
   margin-right: 5px;
@@ -57,4 +56,7 @@ li {
 }
 #description {
   text-transform: capitalize;
+}
+#icon {
+  float: left;
 }
