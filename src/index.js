@@ -21,6 +21,27 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["Thu", "Fri", "Sat"];
+  forecastHTML =
+    forecastHTML +
+    `          <div class="col-2">
+                <div class="weather-forecast-date">Thu</div>
+                <img src="" alt="" width="36" class="forecast-img" />
+                <div class="weather-forecast-temperature">
+                  <span class="weather-forecast-temperature-max"> 18° </span>
+                  <span class="weather-forecast-temperature-min"> 12° </span>
+                </div>
+              </div>
+            </div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
+// Got to minute 12
+
 function displayTemperature(response) {
   let temperature = document.querySelector("#temperature");
   let city = document.querySelector("#city-name");
@@ -29,6 +50,7 @@ function displayTemperature(response) {
   let windSpeed = document.querySelector("#wind-speed");
   let dateElement = document.querySelector("#date");
   let icon = document.querySelector("#icon");
+
   celsiusTemp = Math.round(response.data.main.temp);
   temperature.innerHTML = celsiusTemp;
   city.innerHTML = response.data.name;
@@ -73,6 +95,8 @@ function displayCelsius(event) {
 }
 
 let celsiusTemp = null;
+
+displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSearch);

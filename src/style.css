@@ -86,7 +86,7 @@ a {
   text-decoration: none;
 }
 
-.weather-forecast {
+.weather-forecast-wrapper {
   margin-top: 20px;
   text-align: center;
   color: rgb(33, 33, 33);
