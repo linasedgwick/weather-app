@@ -54,6 +54,10 @@ a {
 .tempDisplay {
   display: inline;
 }
+.forecast-img {
+  display: block;
+  margin: 0 auto;
+}
 .weather-temperature img {
   margin-right: 5px;
   height: 64px;
@@ -81,6 +85,18 @@ a {
 .weather-temperature .active:hover {
   text-decoration: none;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(33, 33, 33);
+}
+.weather-forecast-date,
+.weather-forecast-temperature-min {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
 #description {
   text-transform: capitalize;
 }
