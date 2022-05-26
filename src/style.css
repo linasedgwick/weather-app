@@ -69,21 +69,14 @@ a {
   font-weight: 400;
   line-height: 1;
 }
-.weather-temperature .units {
-  color: #212121;
+.weather-temperature .unit {
+  color: #885df1;
   font-size: 20px;
   line-height: 36px;
   font-weight: 400;
   position: relative;
   line-height: 1;
   top: -34px;
-}
-.weather-temperature .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-}
-.weather-temperature .active:hover {
-  text-decoration: none;
 }
 
 .weather-forecast-wrapper {
