@@ -98,6 +98,7 @@ function search(city) {
 function handleSearch(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input");
+
   search(cityInput.value);
 }
 
@@ -110,11 +111,14 @@ function getLocation(position) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
+function handleLocation(event) {
+  event.preventDefault();
+
+  navigator.geolocation.getCurrentPosition(getLocation);
+}
+
 let currentLocation = document.querySelector("#location-button");
-currentLocation.addEventListener(
-  "click",
-  navigator.geolocation.getCurrentPosition(getLocation)
-);
+currentLocation.addEventListener("click", handleLocation);
 
 function displayFahrenheit(event) {
   event.preventDefault();
