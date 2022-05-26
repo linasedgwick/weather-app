@@ -111,6 +111,14 @@ a {
   border: none;
   height: 50px;
 }
+#location-button {
+  background: #885df1;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px 0;
+  border: none;
+  height: 50px;
+}
 #city-input {
   background: #f9f7fe;
   border: none;
