@@ -111,7 +111,6 @@ function getLocation(position) {
 
 function handleLocation(event) {
   event.preventDefault();
-
   navigator.geolocation.getCurrentPosition(getLocation);
 }
 
