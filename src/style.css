@@ -104,6 +104,7 @@ a {
   border: none;
   height: 50px;
 }
+
 #location-button {
   background: #885df1;
   font-weight: 700;
@@ -111,6 +112,7 @@ a {
   padding: 15px 0;
   height: 50px;
 }
+
 #city-input {
   background: #f9f7fe;
   border: none;
@@ -121,6 +123,7 @@ a {
   font-size: 16px;
   height: 50px;
   line-height: 20px;
+  margin-bottom: 10px;
 }
 
 #humidity {
