@@ -42,26 +42,12 @@ a {
 .overview {
   margin-bottom: 20px;
 }
-.temperature {
-  color: #212121;
-  font-weight: 400;
-  margin-left: 10px;
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 1;
-}
 
-.tempDisplay {
-  display: inline;
-}
-.forecast-img {
-  display: block;
-  margin: 0 auto;
-}
 .weather-temperature img {
   margin-right: 5px;
   height: 64px;
   width: 64px;
+  float: left;
 }
 .weather-temperature strong {
   color: rgb(33, 33, 33);
@@ -84,6 +70,10 @@ a {
   text-align: center;
   color: rgb(33, 33, 33);
 }
+.forecast-img {
+  display: block;
+  margin: 0 auto;
+}
 .weather-forecast-date,
 .weather-forecast-temperature-min {
   font-size: 16px;
@@ -93,18 +83,8 @@ a {
 #description {
   text-transform: capitalize;
 }
-#icon {
-  float: left;
-}
-#search-button {
-  background: #885df1;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 10px 0;
-  border: none;
-  height: 40px;
-}
 
+#search-button,
 #location-button {
   background: #885df1;
   font-weight: 700;
@@ -126,9 +106,7 @@ a {
   margin-bottom: 10px;
 }
 
-#humidity {
-  color: #ed5383;
-}
+#humidity,
 #wind-speed {
   color: #ed5383;
 }
